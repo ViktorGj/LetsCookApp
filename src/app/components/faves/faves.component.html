@@ -1,0 +1,30 @@
+<div>
+    <div class="toggle-container">
+        <mat-slide-toggle>
+            <span class="toggle-label">
+                filter by ingredients
+            </span>
+        </mat-slide-toggle>
+    </div>
+    <mat-tab-group>
+        <mat-tab *ngFor="let filter of filters">
+            <ng-template mat-tab-label>{{filter | uppercase}}</ng-template>
+            <div class="container-fluid">
+                <div class="row">
+                    <ng-container *ngIf="recipes$ | async as recipes">
+                        <div *ngFor="let recipe of recipes" class="col-md-3 recipe-card">
+                            <mat-card (click)="viewRecipe(recipe.id)">
+                                <img class="card-img" src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                                    alt="Photo of a Shiba Inu">
+                                <mat-card-footer>
+                                    <p class="name">{{recipe.title}}</p>
+                                    <p class="number">{{recipe.servings}}</p>
+                                </mat-card-footer>
+                            </mat-card>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap//dist//css/bootstrap.min.css';
+// @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import './assets/theme/theme.scss';
+
+html, body {
+    height: 100%; 
+    font-family: 'Roboto, sans-serif';
+}
+
+button {
+    box-shadow: none !important;
+}
+
+.submit-btn { 
+    border-radius: 2px !important;
+    background-color: #00A3E0 !important;
+    color: white !important;
+}
+
+.cancel-btn {
+    border-radius: 2px !important;
+    color: #979797 !important;
+    width: 103px !important;
+}
+
+.header-btn {
+    color: white;
+    width: auto;
+    height: 32px;
+    background: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.mat-tab-label {
+    min-width: 0!important;
+    padding: 0px !important;
+    flex-grow: 1;
+    &-content {
+        color: #34C9B6;
+    }
+}
+
+.container {
+    padding-top: 115px;
+    padding-bottom: 80px;
+    margin: auto;
+    width: 66%;
+}
+
+mat-tab-header {
+    margin-bottom: 40px;
+}
+
+.toggle-label {
+    font-size: 15px;
+    color: #A0A0A0;
+}
+
+.toggle-container {
+    margin-bottom: 12px;
+}
+
+.link-btn {
+    color: #34C9B6;
+}

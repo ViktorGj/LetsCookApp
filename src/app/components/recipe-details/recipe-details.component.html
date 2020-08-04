@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row">
+        <ng-container *ngIf="recipe">
+            <div class="col-md-6 p-0">
+                <div class="img-container">
+                    <img class="img-details" src="https://www.seriouseats.com/2017/02/20170216-detroit-style-pizza-47-1500x1125-1.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-6 recipe-details">
+                <a mat-flat-button class="link-btn" (click)="editRecipe(recipe.id)">EDIT RECIPE</a>
+                <div>
+                    <div class="title-container">
+                        <h1 class="recipe-title">{{recipe.title | uppercase}}</h1>
+                        <p class="info">YOU HAVE ALL THE NECESSARY INGREDIENTS FOR THIS RECIPE</p>
+                    </div>
+    
+                    <div class="ingredients">
+                        <h5>INGREDIENTS</h5>
+                        <p>
+                            <span class="ingredient">{{recipe.ingredients}}</span>
+                        </p>
+                    </div>
+                    <div class="directions">
+                        <h5>HOW TO MAKE IT:</h5>
+                        <p>
+                            <span class="direction">{{recipe.directions}}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </ng-container>    
+    </div>
+</div>

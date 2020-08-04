@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="container-fluid">
+        <form [formGroup]="form" (ngSubmit)="submit(form)" *ngIf="form">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="upload-img-container">
+                        Image
+                    </div>
+                    <div class="input-group">
+                        <div class="row">
+                            <mat-form-field class="col-md-6" appearance="outline">
+                                <mat-label>Ready in</mat-label>
+                                <input formControlName="readyIn" matInput placeholder="Ready in">
+                            </mat-form-field>
+                            <mat-form-field class="col-md-6" appearance="outline">
+                                <mat-label>Servings</mat-label>
+                                <input formControlName="servings" matInput placeholder="Servings">
+                            </mat-form-field>
+                        </div>
+                        <div class="row">
+                            <mat-form-field class="col-md-6" appearance="outline">
+                                <mat-label>Prep time</mat-label>
+                                <input formControlName="prepTime" matInput placeholder="Prep time">
+                            </mat-form-field>
+                            <mat-form-field class="col-md-6" appearance="outline">
+                                <mat-label>Cook time</mat-label>
+                                <input formControlName="cookTime" matInput placeholder="Cook time">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="meal-type-input">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-radio-group formControlName="mealType">
+                                    <mat-radio-button class="example-radio-button" *ngFor="let filter of filters"
+                                        [value]="filter">
+                                        {{filter}}
+                                    </mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Title</mat-label>
+                        <input formControlName="title" matInput placeholder="Title">
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Ingredients</mat-label>
+                        <input formControlName="ingredients" matInput placeholder="Ingredients">
+                    </mat-form-field>
+                    <mat-form-field class="directions-wrap full-width" appearance="outline">
+                        <mat-label>Directions</mat-label>
+                        <textarea formControlName="directions" rows="10" matInput placeholder="Directions"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="ml-auto">
+                    <button type="button" mat-flat-button class="mat-raised-button cancel-btn"
+                        (click)="navigateTo()">CANCEL</button>
+                    <button type="submit" color="primary" mat-flat-button class="mat-raised-button">{{action | uppercase}}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

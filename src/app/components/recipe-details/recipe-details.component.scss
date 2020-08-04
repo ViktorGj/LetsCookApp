@@ -1,0 +1,34 @@
+.img {
+    &-details {
+        width: 100%;
+    }
+}
+
+.recipe-details {
+    padding: 80px 60px 60px 60px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title-container {
+    margin-bottom: 45px;
+}
+
+.recipe-title {
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 0.14px;
+}
+
+.ingredient, .direction {
+    font-family: 'Lato';
+}
+
+.info {
+    color: #34C9B6;
+    margin: 0px;
+}
+
+.link-btn {
+    color: #34C9B6;
+    padding-left: 0px;
+}

@@ -1,0 +1,26 @@
+.header-container {
+    background-color: #34C9B6;
+    height: 115px;
+}
+
+.btn-group {
+    margin-left: auto;
+    margin-right: 32px;
+}
+
+.header-btn {
+    height: 52px;
+    margin-left: 32px;
+    &:focus {
+        outline: none;
+    }
+}
+
+.menu-icon {
+    margin-right: 30px;
+    font-size: 32px;
+}
+
+.router-link-active {
+    border: 3px solid white;
+}

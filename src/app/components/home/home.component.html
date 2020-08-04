@@ -1,0 +1,44 @@
+<div class="container">
+    <!-- <div class="toggle-container">
+        <mat-slide-toggle>
+            <span class="toggle-label">
+                filter by ingredients
+            </span>
+        </mat-slide-toggle>
+    </div> -->
+
+    <form>
+        <input class="searchInput"
+               type="text"
+               placeholder="Search for a recipe"
+               [formControl]="searchControl"
+               [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let recipe of searchedRecipes | async" [value]="recipe.title">
+            {{recipe.title}}
+          </mat-option>
+        </mat-autocomplete>
+      </form>
+
+    <mat-tab-group (selectedTabChange)="selectTab($event)">
+        <mat-tab *ngFor="let filter of filters">
+            <ng-template mat-tab-label>{{filter | uppercase}}</ng-template>
+            <div class="container-fluid">
+                <div class="row">
+                    <ng-container *ngIf="recipes">
+                        <div *ngFor="let recipe of filteredRecipes" class="col-md-3 recipe-card">
+                            <mat-card (click)="viewRecipe(recipe.id)">
+                                <img class="card-img" src="https://www.seriouseats.com/2017/02/20170216-detroit-style-pizza-47-1500x1125-1.jpg"
+                                    alt="Photo of a Shiba Inu">
+                                <mat-card-footer>
+                                    <p class="name">{{recipe.title}}</p>
+                                    <p class="number">{{recipe.servings}} people</p>
+                                </mat-card-footer>
+                            </mat-card>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

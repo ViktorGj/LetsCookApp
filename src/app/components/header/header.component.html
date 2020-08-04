@@ -1,0 +1,17 @@
+<mat-toolbar class="header-container">
+    <!-- <button mat-icon-button class="header-btn">
+        <mat-icon class="menu-icon">menu</mat-icon>
+        <span>CHOOSE YOUR INGREDIENTS</span>
+    </button> -->
+    <button mat-icon-button class="header-btn" (click)="navigateHome()">
+        HOME
+    </button>
+    <div class="btn-group">
+        <button class="header-btn" (click)="openSubmitRecipe()" routerLinkActive="router-link-active">
+            SUBMIT RECIPE
+        </button>
+        <!-- <button class="header-btn" (click)="openFaves()" routerLinkActive="router-link-active" >
+            FAVES
+        </button> -->
+    </div>
+</mat-toolbar>

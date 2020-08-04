@@ -1,0 +1,25 @@
+.recipe-card {
+    padding: 12px;
+    .name {
+        font-size: 20px;
+        margin: 0px;
+    }
+    .number {
+        font-size: 13px;
+        color: #A0A0A0;
+        margin: 0px;
+    }
+}
+
+.card-img {
+    width: 100%;
+}
+
+mat-card-footer {
+    margin: 0px !important;
+    padding: 13px 0px 16px 16px;
+}
+
+mat-card {
+    padding: 0px;
+}
